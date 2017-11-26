@@ -1,0 +1,19 @@
+<%= form_for @gallery do |f| %>
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</fieldset>
+<fieldset>
+  <%= f.label :location %>
+  <%=  f.text_field :location%>
+</fieldset>
+<fieldset>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+</fieldset>
+<fieldset>
+  <%= f.label :image %>
+  <%= f.date_field :image %>
+</fieldset>
+
+<% end %>

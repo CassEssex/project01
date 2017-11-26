@@ -1,0 +1,12 @@
+<h1> <%= @artist.name %></h1>
+
+<%= image_tag(@artist.image, :class => 'feature') %>
+<ul>
+  <li><%= @artist.nationality %></li>
+  <li><%= @artist.period %></li>
+  <li><%= @artist.dob %></li>
+  <li><%= @artist.death unless @artist.death.nil? %></li>
+  <li><%= @artist.vice unless @artist.vice.nil? %></li>
+</ul>
+
+<%= @artist.works.each do |work| %>
