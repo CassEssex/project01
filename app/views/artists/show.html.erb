@@ -9,11 +9,12 @@
   <li><%= @artist.vice unless @artist.vice.nil? %></li>
 </ul>
 
-<!-- <% @artist.works.each do |work| %>
+<% @artist.works.each do |work| %>
 <%= link_to image_tag(work.image, :class => 'thumb'), work %>
-<% end %> -->
+<% end %>
 
 <div class="controls">
+  <%= link_to 'Add artist', new_artist_path(@artist) %>
   <%= link_to 'Edit artist', edit_artist_path(@artist)%>
   <%= link_to 'Delete artist', @artist, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
 </div>

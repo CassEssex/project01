@@ -3,6 +3,7 @@
 <% @artists.each do |artist| %>
 <%= image_tag(artist.image, :class => 'thumb') %>
 
+
   <ul>
       <li> <%= link_to artist.name, artist_path(artist.id) %></li>
       <li><%= artist.nationality %></li>

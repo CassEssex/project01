@@ -7,11 +7,11 @@ a3 = Artist.create :name => "Brett Whiteley", :nationality => "Australian", :per
 
 
 Gallery.destroy_all
-g1 = Gallery.create :name=>"Philadelphia Museum of Art", :location => "Philadelphia", :url =>"https://www.philamuseum.org"
+g1 = Gallery.create :name=>"Philadelphia Museum of Art", :location => "Philadelphia", :url =>"https://www.philamuseum.org", :image => "http://www.visitphilly.com/resize/images/philadelphia-museum-of-art-east-steps2-900-600vp-587x0.jpg"
 
-g2 = Gallery.create :name=>"Okeefe Gallery", :location => "City of Santa Fe", :url =>"https://www.okeeffemuseum.org/"
+g2 = Gallery.create :name=>"Okeefe Gallery", :location => "City of Santa Fe", :url =>"https://www.okeeffemuseum.org/", :image => "https://www.okeeffemuseum.org/wp-content/uploads/2015/03/Georgia-OKeeffe-Museum-Santa-Fe-Architecture-11-e1426889881207-800x476.jpg"
 
-g3 = Gallery.create :name=>"Brett Whiteley Studio", :location => "Sydney", :url =>"https://www.artgallery.nsw.gov.au/brett-whiteley-studio/"
+g3 = Gallery.create :name=>"Brett Whiteley Studio", :location => "Sydney", :url =>"https://www.artgallery.nsw.gov.au/brett-whiteley-studio/", :image => "https://assets.atdw-online.com.au/images/2a2c62fb9f236f7267134d760d1e2986.jpeg?rect=9,0,2048,1536&w=800&h=600"
 
 Work.destroy_all
 w1 = Work.create :title => "Sunflowers", :year => "1889", :medium => "oil on canvas", :style =>"Post Impressionism", :image => "https://imgc.artprintimages.com/img/print/print/vincent-van-gogh-sunflowers-c-1888_a-l-1344968-8880730.jpg"

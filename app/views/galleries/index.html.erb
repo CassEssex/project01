@@ -1,11 +1,11 @@
 <h1> The galleries </h1>
 
 <% @galleries.each do |gallery| %>
-<%= image_tag(galley.image, :class => 'thumb') %>
+<%= image_tag(gallery.image, :class => 'thumb') %>
 
   <ul>
       <li><%= link_to gallery.name, gallery_path(gallery.id) %></li>
       <li><%= gallery.location %></li>
       <li><%= gallery.url %></li>
-    </ul>
+  </ul>
   <% end %>

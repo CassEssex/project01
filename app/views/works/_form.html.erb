@@ -1,23 +1,29 @@
-<%= form_for @works do |f| %>
+<%= form_for @work do |f| %>
 <fieldset>
-  <%= f.text :title %>
+  <%= f.label :title %>
   <%= f.text_field :title %>
 </fieldset>
 <fieldset>
-  <%= f.text :year %>
+  <%= f.label :year %>
   <%= f.text_field :year %>
 </fieldset>
 <fieldset>
-  <%= f.text :medium %>
+  <%= f.label :medium %>
   <%= f.text_field :medium %>
 </fieldset>
 <fieldset>
-  <%= f.text :style %>
+  <%= f.label :style %>
   <%= f.text_field :style %>
 </fieldset>
 <fieldset>
-  <%= f.text :image %>
+  <%= f.label :image %>
    <%= f.text_field :image %>
+</fieldset>
+
+
+<fieldset>
+  <label></label>
+  <%= f.submit %>
 </fieldset>
 
 <% end %>
