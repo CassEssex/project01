@@ -1,0 +1,13 @@
+<h1><%= @work.title %></h1>
+
+<%= image_tag(@work.image, :class => 'feature') %>
+<ul>
+  <li><%= @work.year %></li>
+  <li><%= @work.medium %></li>
+  <li><%= @work.style unless @work.style.nil? %></li>
+  <li><%= @work.artist_id %></li>
+</ul>
+
+<!-- <% @work.works.each do |work| %>
+<%= link_to image_tag(work.image, :class => 'thumb'), work %> -->
+<% end %>

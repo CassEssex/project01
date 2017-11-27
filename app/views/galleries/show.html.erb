@@ -1,0 +1,14 @@
+<h1><%= @gallery.name %></h1>
+
+<%= image_tag(@gallery.image, :class => 'feature') %>
+<ul>
+  <li><%= @gallery.location %></li>
+  <li><%= @gallery.url %></li>
+  <li><%= @gallery.artist_id %></li>
+  <li><%= @gallery.work_id %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit gallery', edit_gallery_path(@gallery) %>
+  <%= link_to 'Delete gallery', @gallery, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>

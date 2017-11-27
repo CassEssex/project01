@@ -4,9 +4,16 @@
 <ul>
   <li><%= @artist.nationality %></li>
   <li><%= @artist.period %></li>
-  <li><%= @artist.dob %></li>
-  <li><%= @artist.death unless @artist.death.nil? %></li>
+  <li><%= @artist.dob.strftime '%a, %dth %b %Y' %></li>
+  <li><%= @artist.death.strftime '%a, %dth %b %Y' unless @artist.death.nil? %></li>
   <li><%= @artist.vice unless @artist.vice.nil? %></li>
 </ul>
 
-<%= @artist.works.each do |work| %>
+<!-- <% @artist.works.each do |work| %>
+<%= link_to image_tag(work.image, :class => 'thumb'), work %>
+<% end %> -->
+
+<div class="controls">
+  <%= link_to 'Edit artist', edit_artist_path(@artist)%>
+  <%= link_to 'Delete artist', @artist, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>

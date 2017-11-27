@@ -18,14 +18,14 @@ class ArtistsController < ApplicationController
 
   def update
     artist = Artist.find params[:id]
-    artist.update artists_params
+    artist.update artist_params
     redirect_to artist
   end
 
   def show
     @artist = Artist.find params[:id]
-
   end
+
   def destroy
     artist = Artist.find params[:id]
     artist.destroy
@@ -34,6 +34,6 @@ class ArtistsController < ApplicationController
 
   private
   def artist_params
-    params.require(:artist).permit(:name, :nationality, :dob, :period, :image)
+    params.require(:artist).permit(:name, :nationality, :period, :dob, :death, :vice,:image)
   end
 end

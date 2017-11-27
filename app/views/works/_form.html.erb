@@ -1,14 +1,23 @@
-<%= form_for @galley do |f| %>
+<%= form_for @works do |f| %>
 <fieldset>
-  <%= f.text :name %>
-  <%= f.text_field :name %>
+  <%= f.text :title %>
+  <%= f.text_field :title %>
 </fieldset>
 <fieldset>
-  <%= f.text :location %>
-  <%= f.text_field :location %>
+  <%= f.text :year %>
+  <%= f.text_field :year %>
 </fieldset>
 <fieldset>
-  <%= f.text :url %>
-  <%= f.text_field :image %>
+  <%= f.text :medium %>
+  <%= f.text_field :medium %>
 </fieldset>
+<fieldset>
+  <%= f.text :style %>
+  <%= f.text_field :style %>
+</fieldset>
+<fieldset>
+  <%= f.text :image %>
+   <%= f.text_field :image %>
+</fieldset>
+
 <% end %>

@@ -21,11 +21,15 @@
 </fieldset>
 <fieldset>
   <%= f.label :vice %>
-  <%= f.date_field :vice %>
+  <%= f.text_field :vice %>
 </fieldset>
 <fieldset>
-  <%= label :image %>
+  <%= f.label :image %>
   <%= f.text_field :image %>
+</fieldset>
+<fieldset>
+  <label></label>
+  <%= f.submit %>
 </fieldset>
 
 <% end %>
