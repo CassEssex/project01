@@ -8,19 +8,16 @@
   <li><%= @work.year %></li>
   <li><%= @work.medium %></li>
   <li><%= @work.style unless @work.style.nil? %></li>
+  <% unless @work.gallery.nil? %>
+      <li><%= link_to @work.gallery.name, @work.gallery %></li>
+    <% end %>
 </ul>
-
-<% unless @work.gallery.nil? %>
-    <li><%= link_to @work.gallery.name, @work.gallery %></li>
-  <% end %>
 
 <div class="controls">
   <%= link_to 'Add work', new_work_path(@work) %>
   <%= link_to 'Edit work', edit_work_path(@work)%>
   <%= link_to 'Delete work', @work, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
 </div>
-
-
 
 <% @work.artist.works.each do |work| %>
 <!-- unless statement re the image id -->

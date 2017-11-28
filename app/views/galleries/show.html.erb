@@ -2,14 +2,15 @@
 
 <%= image_tag(@gallery.image, :class => 'feature') %>
 <ul>
-  <% unless @gallery.works.nil? %>
-    <% @gallery.works.each do |work| %>
-      <li><%= link_to work.title, work %></li>
-    <% end %>
-  <% end %>
 
     <li><%= @gallery.location %></li>
     <li><%= link_to @gallery.url, @gallery.url %></li>
+
+    <% unless @gallery.works.nil? %>
+      <% @gallery.works.each do |work| %>
+        <li><%= link_to work.title, work %></li>
+      <% end %>
+    <% end %>
 
 </ul>
 
@@ -18,3 +19,8 @@
   <%= link_to 'Edit gallery', edit_gallery_path(@gallery) %>
   <%= link_to 'Delete gallery', @gallery, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
 </div>
+
+<% @gallery.works.each do |work| %>
+<!-- unless statement re the image id -->
+<%= link_to image_tag(work.image, :class => 'thumb'), work %>
+<% end %>

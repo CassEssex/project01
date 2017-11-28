@@ -1,16 +1,18 @@
-<h1> The artists </h1>
+<h1> THE ARTISTS </h1>
 
-<% @artists.each do |artist| %>
-<%= image_tag(artist.image, :class => 'thumb') %>
 
+  <% @artists.each do |artist| %>
+  <div class="col-md-4">
+  <%= image_tag(artist.image, :class => 'thumb') %>
 
   <ul>
       <li> <%= link_to artist.name, artist_path(artist.id) %></li>
-      <li><%= artist.nationality %></li>
-      <li><%= artist.period %></li>
-      <li><%= artist.dob.strftime '%a, %dth %b %Y' unless artist.dob.nil?  %></li>
-      <li><%= artist.death.strftime '%a, %dth %b %Y' unless artist.death.nil?  %></li>
-      <li><%= artist.vice %></li>
+      <li>Nationality <%= artist.nationality %></li>
+      <li>Period <%= artist.period %></li>
+      <li>DOB <%= artist.dob.strftime '%a, %dth %b %Y' unless artist.dob.nil?  %></li>
+      <li>Death <%= artist.death.strftime '%a, %dth %b %Y' unless artist.death.nil?  %></li>
+      <li>Vice <%= artist.vice %></li>
 
   </ul>
+</div>
   <% end %>

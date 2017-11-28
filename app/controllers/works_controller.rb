@@ -34,6 +34,6 @@ end
 
 private
 def work_params
-  params.require(:work).permit(:title, :year, :medium, :style, :image, :artist_id)
+  params.require(:work).permit(:title, :year, :medium, :style, :image, :artist_id, :gallery_id)
 end
 end

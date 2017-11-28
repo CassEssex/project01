@@ -25,6 +25,10 @@
 <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
 </fieldset>
 
+<fieldset>
+<%= f.label :gallery_id %>
+<%= f.select :gallery_id, Gallery.pluck(:name, :id), :include_blank => true %>
+</fieldset>
 
 <fieldset>
   <label></label>

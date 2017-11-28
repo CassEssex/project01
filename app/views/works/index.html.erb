@@ -1,14 +1,17 @@
 <h1> The works </h1>
 
 <% @works.each do |work| %>
+
+<div class="col-md-4">
  <%= image_tag(work.image, :class => 'thumb') %>
 
    <ul>
       <li><%= link_to work.title, work_path(work.id) %></li>
+      <li><%= link_to work.artist.name %></li>
       <li>Created <%= work.year %></li>
       <li>Medium <%= work.medium %></li>
       <li>Style <%= work.style %></li>
-      <li><%= link_to work.artist.name %></li>
-   </ul>
 
+   </ul>
+</div>
 <% end %>

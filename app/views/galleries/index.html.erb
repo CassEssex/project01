@@ -1,6 +1,8 @@
 <h1> The galleries </h1>
 
 <% @galleries.each do |gallery| %>
+
+<div class="col-md-4">
 <%= image_tag(gallery.image, :class => 'thumb') %>
 
   <ul>
@@ -8,4 +10,6 @@
       <li><%= gallery.location %></li>
       <li><%= gallery.url %></li>
   </ul>
+
+</div>
   <% end %>
