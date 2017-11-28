@@ -2,12 +2,13 @@
 
 <% @works.each do |work| %>
  <%= image_tag(work.image, :class => 'thumb') %>
- 
+
    <ul>
-    <li><%= link_to work.title, work_path(work.id) %></li>
-    <li><%= work.year %></li>
-    <li><%= work.medium %></li>
-    <li><%= work.style %></li>
+      <li><%= link_to work.title, work_path(work.id) %></li>
+      <li>Created <%= work.year %></li>
+      <li>Medium <%= work.medium %></li>
+      <li>Style <%= work.style %></li>
+      <li><%= link_to work.artist.name %></li>
    </ul>
 
 <% end %>

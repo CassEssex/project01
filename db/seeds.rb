@@ -5,6 +5,7 @@ a2 = Artist.create :name => "Georgia O'Keeffe", :nationality => "American", :per
 
 a3 = Artist.create :name => "Brett Whiteley", :nationality => "Australian", :period => "Abstract expressionism", :dob => "1939-04-07", :death => "1992-06-15",:vice => "Heroin", :image => "http://cdn.newsapi.com.au/image/v1/6e366e88e44b0777b55a87ea6f2ffbd3?width=316"
 
+a4 = Artist.create :name => "Margaret Preston", :nationality => "Australian", :period => "Modernism", :dob => "1875-04-29", :death => "1963-05-28", :image => "http://blog.qagoma.qld.gov.au/wp-content/media/digital-blog_MakingModernism_MargaretPreston.jpg"
 
 Gallery.destroy_all
 g1 = Gallery.create :name=>"Philadelphia Museum of Art", :location => "Philadelphia", :url =>"https://www.philamuseum.org", :image => "http://www.visitphilly.com/resize/images/philadelphia-museum-of-art-east-steps2-900-600vp-587x0.jpg"
@@ -24,9 +25,14 @@ w4 = Work.create :title => "The green mountain", :year => "1969", :medium => "oi
 
 w5 = Work.create :title => "The balcony 2", :year => "1975", :medium => "oil on canvas", :style => "Abstract", :image => "http://www.smh.com.au/content/dam/images/3/1/t/e/6/image.gallery.socialLead.620x349.31tec.png/1391255870723.jpg"
 
+w6 = Work.create :title => "The Starry Night", :year => "1889", :medium => "oil on canvas", :style => "Abstract", :image => "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/300px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
 
-a1.works << w1
+a1.works << w1 << w6
 a1.galleries << g1
+g1.works << w1
+g2.works << w2
+g3.works << w3 << w4 << w5
+g1.works << w6
 a2.works << w2
 a2.galleries << g2
 a3.works << w3 << w4 << w5

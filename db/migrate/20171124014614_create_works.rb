@@ -7,6 +7,7 @@ class CreateWorks < ActiveRecord::Migration[5.1]
       t.text :style
       t.text :image
       t.integer :artist_id
+      t.integer :gallery_id
       t.timestamps
 
     end

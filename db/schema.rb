@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20171124014949) do
     t.text "style"
     t.text "image"
     t.integer "artist_id"
+    t.integer "gallery_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
