@@ -15,6 +15,12 @@
   <%= f.label :image %>
   <%= f.text_field :image %>
 </fieldset>
+
+<fieldset>
+  <%= f.label :work_id %>
+  <%= f.select :work_id, Work.pluck(:name, :id), :include_blank => true %>
+</fieldset>
+
 <fieldset>
   <label></label>
   <%= f.submit %>

@@ -3,7 +3,7 @@ class CreateGalleries < ActiveRecord::Migration[5.1]
     create_table :galleries do |t|
       t.text :name
       t.text :location
-      t.text :url
+      t.url :url
       t.text :image
       t.integer :artist_id
       t.integer :work_id

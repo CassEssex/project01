@@ -3,12 +3,16 @@
 <%= image_tag(@work.image, :class => 'feature') %>
 <ul>
   <% unless @work.artist.nil? %>
-      <li><%= link_to @work.artist.name, @work.artist %></li>
+  <li><%= link_to @work.artist.name, @work.artist %></li>
     <% end %>
   <li><%= @work.year %></li>
   <li><%= @work.medium %></li>
   <li><%= @work.style unless @work.style.nil? %></li>
 </ul>
+
+<% unless @work.gallery.nil? %>
+    <li><%= link_to @work.gallery.name, @work.gallery %></li>
+  <% end %>
 
 <div class="controls">
   <%= link_to 'Add work', new_work_path(@work) %>

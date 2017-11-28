@@ -3,14 +3,14 @@
 <%= image_tag(@gallery.image, :class => 'feature') %>
 <ul>
   <% unless @gallery.works.nil? %>
-
-    <% @gallery.works.each do |work|  %>
-    <%= link_to image_tag(work.image, :class => 'thumb'), work %>
+    <% @gallery.works.each do |work| %>
+      <li><%= link_to work.title, work %></li>
     <% end %>
+  <% end %>
 
     <li><%= @gallery.location %></li>
-    <li><%= @gallery.url %></li>
-  <% end %>
+    <li><%= link_to @gallery.url, @gallery.url %></li>
+
 </ul>
 
 <div class="controls">
