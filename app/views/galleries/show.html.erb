@@ -3,21 +3,21 @@
 <%= image_tag(@gallery.image, :class => 'feature') %>
 <ul>
 
-    <li><%= @gallery.location %></li>
-    <li><%= link_to @gallery.url, @gallery.url %></li>
+    <li><b>LOCATION </b><%= @gallery.location %></li>
+    <li><b>URL </b><%= link_to @gallery.url, @gallery.url %></li>
 
     <% unless @gallery.works.nil? %>
       <% @gallery.works.each do |work| %>
-        <li><%= link_to work.title, work %></li>
+        <li><b>WORKS </b><%= link_to work.title, work %></li>
       <% end %>
     <% end %>
 
 </ul>
 
 <div class="controls">
-  <%= link_to 'Add gallery', new_gallery_path(@gallery) %>
-  <%= link_to 'Edit gallery', edit_gallery_path(@gallery) %>
-  <%= link_to 'Delete gallery', @gallery, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Add gallery', new_gallery_path(@gallery) %></button>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Edit gallery', edit_gallery_path(@gallery) %></button>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Delete gallery', @gallery, :method => 'delete', :data => {:confirm => 'Are you sure?'} %></button>
 </div>
 
 <% @gallery.works.each do |work| %>

@@ -1,18 +1,28 @@
 <h1> THE ARTISTS </h1>
 
+  <div class="controls">
+<button type="button" class="btn btn-default btn-xs">  <%= link_to 'Add artist', new_artist_path(@artist) %>
+  </div>
+</button>
 
-  <% @artists.each do |artist| %>
-  <div class="col-md-4">
-  <%= image_tag(artist.image, :class => 'thumb') %>
+  <% @artists.each_slice(3) do |row| %>
 
-  <ul>
-      <li> <%= link_to artist.name, artist_path(artist.id) %></li>
-      <li>Nationality <%= artist.nationality %></li>
-      <li>Period <%= artist.period %></li>
-      <li>DOB <%= artist.dob.strftime '%a, %dth %b %Y' unless artist.dob.nil?  %></li>
-      <li>Death <%= artist.death.strftime '%a, %dth %b %Y' unless artist.death.nil?  %></li>
-      <li>Vice <%= artist.vice %></li>
+    <div class="row">
 
-  </ul>
-</div>
+    <% row.each do |artist| %>
+    <div class="col-md-4">
+      <%= image_tag(artist.image, :class => 'thumb') %>
+
+      <ul>
+          <li> <%= link_to artist.name, artist_path(artist.id) %></li>
+          <li><b>NATIONALITY</b> <%= artist.nationality %></li>
+          <li><b>Period </b><%= artist.period %></li>
+          <li><b>DOB </b><%= artist.dob.strftime '%a, %dth %b %Y' unless artist.dob.nil?  %></li>
+          <li><b>Death</b> <%= artist.death.strftime '%a, %dth %b %Y' unless artist.death.nil?  %></li>
+          <!-- <li><b>Vice</b> <%= artist.vice unless artist.vice.nil?%></li> -->
+
+      </ul>
+    </div>
+    <% end %>
+  </div>
   <% end %>

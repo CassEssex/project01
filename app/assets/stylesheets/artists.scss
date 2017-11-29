@@ -1,16 +1,21 @@
 h1 {
   font-size: 26px;
   color: #333;
-  opacity: 0.7;
   font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 20px;
 }
 
+b {
+  text-transform: uppercase;
+}
 .menu {
   color: #333ab7;
   font-weight: 600;
   font-size: 32px;
   padding: 2%;
-  margin:  1% 1% 1% 40%;
+  margin:  1% 1% 1% 45%;
   display: inline-block;
 }
 
@@ -18,9 +23,9 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   width: 960px;
   margin: 0 auto;
-  background-color: white;
+  background-color: #77A8CC;
+  min-height: 100vh;
 }
-
 
 fieldset {
   border: none;
@@ -32,11 +37,34 @@ label {
   text-align: right;
 }
 
+li{
+  color: #333;
+}
+
 .thumb {
   max-width: 10em;
   max-height: 10em;
+  margin: 20px;
+  filter:grayscale(100%);
+
+}
+
+.thumb:hover{
+  filter:grayscale(0);
+}
+
+button {
+  transition: .5s;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: #c61140;
+  transform: scale(1.2);
+
 }
 
 .feature {
   max-width: 30em;
+  border:5px solid white;
 }

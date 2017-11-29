@@ -1,33 +1,34 @@
-<%= form_for @artist do |f| %>
-<fieldset>
+
+<%= form_for @artist , :class => "form-horizontal" do |f| %>
+<fieldset class="form-group">
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, :class => "form-control" %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :nationality %>
-  <%=  f.text_field :nationality%>
+  <%=  f.text_field :nationality, :class => "form-control"%>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :period %>
-  <%= f.text_field :period %>
+  <%= f.text_field :period, :class => "form-control" %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :dob %>
-  <%= f.date_field :dob %>
+  <%= f.date_field :dob , :class => "form-control"%>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :death %>
-  <%= f.date_field :death %>
+  <%= f.date_field :death, :class => "form-control" %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :vice %>
-  <%= f.text_field :vice %>
+  <%= f.text_field :vice , :class => "form-control"%>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :image %>
-  <%= f.text_field :image %>
+  <%= f.text_field :image , :class => "form-control"%>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <label></label>
   <%= f.submit %>
 </fieldset>

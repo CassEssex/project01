@@ -2,21 +2,21 @@
 
 <%= image_tag(@work.image, :class => 'feature') %>
 <ul>
-  <% unless @work.artist.nil? %>
-  <li><%= link_to @work.artist.name, @work.artist %></li>
-    <% end %>
-  <li><%= @work.year %></li>
-  <li><%= @work.medium %></li>
-  <li><%= @work.style unless @work.style.nil? %></li>
-  <% unless @work.gallery.nil? %>
-      <li><%= link_to @work.gallery.name, @work.gallery %></li>
+      <% unless @work.artist.nil? %>
+          <li><b>BY </b><%= link_to @work.artist.name, @work.artist %></li>
+      <% end %>
+            <li><b>CREATED </b><%= @work.year %></li>
+            <li><b>MEDIUM </b><%= @work.medium %></li>
+            <li><b>STYLE </b><%= @work.style unless @work.style.nil? %></li>
+      <% unless @work.gallery.nil? %>
+        <li><b>URL </b><%= link_to @work.gallery.name, @work.gallery %></li>
     <% end %>
 </ul>
 
 <div class="controls">
-  <%= link_to 'Add work', new_work_path(@work) %>
-  <%= link_to 'Edit work', edit_work_path(@work)%>
-  <%= link_to 'Delete work', @work, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Add work', new_work_path(@work) %></button>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Edit work', edit_work_path(@work)%></button>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Delete work', @work, :method => 'delete', :data => {:confirm => 'Are you sure?'} %></button>
 </div>
 
 <% @work.artist.works.each do |work| %>

@@ -1,17 +1,27 @@
 <h1> The works </h1>
 
-<% @works.each do |work| %>
-
-<div class="col-md-4">
- <%= image_tag(work.image, :class => 'thumb') %>
-
-   <ul>
-      <li><%= link_to work.title, work_path(work.id) %></li>
-      <li><%= link_to work.artist.name %></li>
-      <li>Created <%= work.year %></li>
-      <li>Medium <%= work.medium %></li>
-      <li>Style <%= work.style %></li>
-
-   </ul>
+<div class="controls">
+  <button type="button" class="btn btn-default btn-xs"> <%= link_to 'Add work', new_work_path(@work) %>
 </div>
+</button>
+
+<% @works.each_slice(3) do |row| %>
+
+  <div class="row">
+
+  <% row.each do |work| %>
+  <div class="col-md-4">
+   <%= image_tag(work.image, :class => 'thumb') %>
+     <ul>
+        <li><b>TITLE </b><%= link_to work.title, work_path(work.id) %></li>
+        <li><b>NAME </b><%= link_to work.artist.name, work.artist %></li>
+        <li><b>CREATED </b> <%= work.year %></li>
+        <li><b>MEDIUM </b> <%= work.medium %></li>
+        <li><b>STYLE </b> <%= work.style %></li>
+     </ul>
+  </div>
+  <% end %>
+
+  </div>
+
 <% end %>

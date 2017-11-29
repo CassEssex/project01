@@ -2,11 +2,11 @@
 
 <%= image_tag(@artist.image, :class => 'feature') %>
 <ul>
-  <li><%= @artist.nationality %></li>
-  <li><%= @artist.period %></li>
-  <li><%= @artist.dob.strftime '%a, %dth %b %Y' %></li>
-  <li><%= @artist.death.strftime '%a, %dth %b %Y' unless @artist.death.nil? %></li>
-  <li><%= @artist.vice unless @artist.vice.nil? %></li>
+  <li><b>NATIONALITY </b><%= @artist.nationality %></li>
+  <li><b>PERIOD </b><%= @artist.period %></li>
+  <li><b>DOB </b><%= @artist.dob.strftime '%a, %dth %b %Y' %></li>
+  <li><b>DEATH </b><%= @artist.death.strftime '%a, %dth %b %Y' unless @artist.death.nil? %></li>
+  <li><b>VICE </b><%= @artist.vice unless @artist.vice.nil? %></li>
 </ul>
 
 <% @artist.works.each do |work| %>
@@ -14,7 +14,8 @@
 <% end %>
 
 <div class="controls">
-  <%= link_to 'Add artist', new_artist_path(@artist) %>
-  <%= link_to 'Edit artist', edit_artist_path(@artist)%>
-  <%= link_to 'Delete artist', @artist, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Add artist', new_artist_path(@artist) %></button>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Edit artist', edit_artist_path(@artist)%></button>
+  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Delete artist', @artist, :method => 'delete', :data => {:confirm => 'Are you sure?'} %></button>
+</div>
 </div>

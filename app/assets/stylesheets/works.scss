@@ -5,12 +5,21 @@ fieldset {
 label {
   display: inline-block;
   min-width: 82px;
-  text-align: right;
+  text-align: left;
+  text-decoration: none;
 }
 
 .thumb {
-  max-width: 10em;
+  max-width: 15em;
+  max-height: 15em;
+  padding:20px;
+  border:1px solid grey;
+  background-color: white;
 }
+  ul{
+    list-style-type: none;
+    padding:0;
+  }
 
 .feature {
   max-width: 30em;

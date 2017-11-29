@@ -1,33 +1,33 @@
-<%= form_for @work do |f| %>
-<fieldset>
+<%= form_for @work, :class => "form-horizontal" do |f| %>
+<fieldset class="form-group">
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, :class => "form-control"%>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :year %>
-  <%= f.text_field :year %>
+  <%= f.text_field :year, :class => "form-control" %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :medium %>
-  <%= f.text_field :medium %>
+  <%= f.text_field :medium, :class => "form-control" %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :style %>
-  <%= f.text_field :style %>
+  <%= f.text_field :style, :class => "form-control" %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :image %>
-   <%= f.text_field :image %>
+   <%= f.text_field :image, :class => "form-control" %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 <%= f.label :artist_id %>
-<%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
+<%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true, :class => "form-control" %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 <%= f.label :gallery_id %>
-<%= f.select :gallery_id, Gallery.pluck(:name, :id), :include_blank => true %>
+<%= f.select :gallery_id, Gallery.pluck(:name, :id), :include_blank => true, :class => "form-control" %>
 </fieldset>
 
 <fieldset>

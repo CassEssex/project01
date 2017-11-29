@@ -1,27 +1,27 @@
-<%= form_for @gallery do |f| %>
-<fieldset>
+<%= form_for @gallery, :class => "form-horizontal" do |f| %>
+<fieldset class="form-group">
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, :class => "form-control"  %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :location %>
-  <%=  f.text_field :location%>
+  <%=  f.text_field :location, :class => "form-control" %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :url %>
-  <%= f.text_field :url %>
+  <%= f.text_field :url, :class => "form-control"  %>
 </fieldset>
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :image %>
-  <%= f.text_field :image %>
+  <%= f.text_field :image, :class => "form-control"  %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :work_id %>
-  <%= f.select :work_id, Work.pluck(:name, :id), :include_blank => true %>
+  <%= f.select :work_id, Work.pluck(:title, :id), :include_blank => true, :class => "form-control"  %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
   <label></label>
   <%= f.submit %>
 </fieldset>
