@@ -23,4 +23,43 @@ label {
 
 .feature {
   max-width: 30em;
+  margin-left: 15px;
+}
+
+.large-image {
+  display: inline-block;
+}
+
+.details-list {
+  display: inline-block;
+  margin-left:30px;
+}
+
+.diamond-7 {
+    background-color:#77A8CC;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    transform-origin: 0 -20%;
+    position:absolute;
+    z-index: -1;
+}
+
+.diamond-8 {
+    background-color: #FF5753;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    transform-origin: -150% 55%;
+    position:absolute;
+    z-index: -1;
+}
+.diamond-9 {
+    background-color: #CBCC1A;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    transform-origin: -312% 50%;
+    position:absolute;
+    z-index: -1;
 }

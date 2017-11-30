@@ -5,11 +5,14 @@ h1 {
   text-transform: uppercase;
   color: white;
   margin-bottom: 20px;
+  margin-left: 15px;
+
 }
 
 b {
   text-transform: uppercase;
 }
+
 .menu {
   color: #333ab7;
   font-weight: 600;
@@ -39,6 +42,7 @@ label {
 
 li{
   color: #333;
+  margin-left: 20px;
 }
 
 .thumb {
@@ -46,7 +50,6 @@ li{
   max-height: 10em;
   margin: 20px;
   filter:grayscale(100%);
-
 }
 
 .thumb:hover{
@@ -56,15 +59,44 @@ li{
 button {
   transition: .5s;
   border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 button:hover{
   background-color: #c61140;
   transform: scale(1.2);
-
 }
 
 .feature {
   max-width: 30em;
   border:5px solid white;
+}
+.diamond-1 {
+    background-color:#77A8CC;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    transform-origin: 0 -20%;
+    position:absolute;
+    z-index: -1;
+}
+
+.diamond-2 {
+    background-color: cadetblue;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    transform-origin: -150% 55%;
+    position:absolute;
+    z-index: -1;
+}
+.diamond-3 {
+    background-color: coral;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    transform-origin: -312% 50%;
+    position:absolute;
+    z-index: -1;
 }

@@ -1,18 +1,27 @@
 <h1><%= @gallery.name %></h1>
 
-<%= image_tag(@gallery.image, :class => 'feature') %>
-<ul>
+<div class="diamond-4"></div>
+<div class="diamond-5"></div>
+<div class="diamond-6"></div>
 
-    <li><b>LOCATION </b><%= @gallery.location %></li>
-    <li><b>URL </b><%= link_to @gallery.url, @gallery.url %></li>
+<div class="large-image">
+  <%= image_tag(@gallery.image, :class => 'feature') %>
 
-    <% unless @gallery.works.nil? %>
-      <% @gallery.works.each do |work| %>
-        <li><b>WORKS </b><%= link_to work.title, work %></li>
+  <div class="details-list">
+    <ul>
+
+      <li><b>LOCATION </b><%= @gallery.location %></li>
+      <li><b>URL </b><%= link_to @gallery.url, @gallery.url %></li>
+
+      <% unless @gallery.works.nil? %>
+        <% @gallery.works.each do |work| %>
+          <li><b>WORKS </b><%= link_to work.title, work %></li>
+        <% end %>
       <% end %>
-    <% end %>
 
-</ul>
+    </ul>
+  </div>
+</div>
 
 <div class="controls">
   <button type="button" class="btn btn-default btn-xs"><%= link_to 'Add gallery', new_gallery_path(@gallery) %></button>

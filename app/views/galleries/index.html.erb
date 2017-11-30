@@ -1,25 +1,29 @@
 <h1> The galleries </h1>
 
-<div class="controls">
-  <button type="button" class="btn btn-default btn-xs"><%= link_to 'Add gallery', new_gallery_path(@gallery) %>
-</div>
-  </button>
+  <div class="diamond-4"></div>
+  <div class="diamond-5"></div>
+  <div class="diamond-6"></div>
 
-<% @galleries.each_slice(3) do |row| %>
+  <div class="controls">
+    <button type="button" class="btn btn-default btn-xs"><%= link_to 'Add gallery', new_gallery_path(@gallery) %>
+  </div>
+    </button>
 
-<div class="row">
+  <% @galleries.each_slice(3) do |row| %>
 
-<% row.each do |gallery| %>
+    <div class="row">
 
-<div class="col-md-4">
-<%= image_tag(gallery.image, :class => 'thumb') %>
+    <% row.each do |gallery| %>
+
+    <div class="col-md-4">
+      <%= image_tag(gallery.image, :class => 'thumb') %>
 
   <ul>
       <li><b>Name </b><%= link_to gallery.name, gallery_path(gallery.id) %></li>
       <li><b>location </b><%= gallery.location %></li>
       <li><b>url </b><%= gallery.url %></li>
   </ul>
+  </div>
+  <% end %>
 </div>
 <% end %>
-</div>
-  <% end %>

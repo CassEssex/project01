@@ -1,17 +1,26 @@
 <h1><%= @work.title %></h1>
 
-<%= image_tag(@work.image, :class => 'feature') %>
-<ul>
-      <% unless @work.artist.nil? %>
-          <li><b>BY </b><%= link_to @work.artist.name, @work.artist %></li>
-      <% end %>
-            <li><b>CREATED </b><%= @work.year %></li>
-            <li><b>MEDIUM </b><%= @work.medium %></li>
-            <li><b>STYLE </b><%= @work.style unless @work.style.nil? %></li>
-      <% unless @work.gallery.nil? %>
-        <li><b>URL </b><%= link_to @work.gallery.name, @work.gallery %></li>
-    <% end %>
-</ul>
+<div class="diamond-7"></div>
+<div class="diamond-8"></div>
+<div class="diamond-9"></div>
+
+<div class="large-image">
+  <%= image_tag(@work.image, :class => 'feature') %>
+
+  <div class="details-list">
+    <ul>
+          <% unless @work.artist.nil? %>
+              <li><b>BY </b><%= link_to @work.artist.name, @work.artist %></li>
+          <% end %>
+                <li><b>CREATED </b><%= @work.year %></li>
+                <li><b>MEDIUM </b><%= @work.medium %></li>
+                <li><b>STYLE </b><%= @work.style unless @work.style.nil? %></li>
+          <% unless @work.gallery.nil? %>
+            <li><b>URL </b><%= link_to @work.gallery.name, @work.gallery %></li>
+        <% end %>
+    </ul>
+  </div>
+</div>
 
 <div class="controls">
   <button type="button" class="btn btn-default btn-xs"><%= link_to 'Add work', new_work_path(@work) %></button>
