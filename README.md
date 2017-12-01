@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+"The artist work gallery database"
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version  - 2.4.2
 
-* System dependencies
+* Rails version  - 5.1.4
 
-* Configuration
+* Built With Ruby Rails CSS and HTML
 
-* Database creation
+* System dependencies - none
 
-* Database initialization
+* Versioning 1.0
 
-* How to run the test suite
+* Authors Cassandra Essex
 
-* Services (job queues, cache servers, search engines, etc.)
+Getting Started
 
-* Deployment instructions
+All you need is a browser to run the database. Chrome works best.
+
+Running the tests
+
+The database has 3 separate tables, the artists details, the works and the galleries where they are currently being shown.
+
+Acknowledgments My teacher and TA at GA My cat Paddy for keeping me entertained when the code was not working at home.
+
+
+
+
+
+
 
 * ...
