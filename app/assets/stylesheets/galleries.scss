@@ -29,3 +29,11 @@
     position:absolute;
     z-index: -1;
 }
+
+.galleries {
+  display: inline-block;
+}
+
+.galleries > a{
+  color:#333ab7;
+}

@@ -8,15 +8,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-
   <div class="container">
 
     <body>
       <nav>
           <div class="menu">
-          <%= link_to 'ARTISTS', artists_path %>
-          <%= link_to 'WORKS', works_path %>
-          <%= link_to 'GALLERIES', galleries_path %>
+          <div class="artists"><%= link_to 'ARTISTS', artists_path %></div>
+          <div class="works"><%= link_to 'WORKS', works_path %></div>
+          <div class="galleries"><%= link_to 'GALLERIES', galleries_path %></div>
           </div>
       </nav>
 
