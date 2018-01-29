@@ -23,7 +23,7 @@
           <li><b>Period </b><%= artist.period %></li>
           <li><b>DOB </b><%= artist.dob.strftime '%a, %dth %b %Y' unless artist.dob.nil?  %></li>
           <li><b>Death</b> <%= artist.death.strftime '%a, %dth %b %Y' unless artist.death.nil?  %></li>
-          <!-- <li><b>Vice</b> <%= artist.vice unless artist.vice.nil?%></li> -->
+          <li><b>Vice</b> <%= artist.vice unless artist.vice.nil?%></li>
 
       </ul>
     </div>

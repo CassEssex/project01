@@ -1,3 +1,27 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1{
+  z-index: 6;
+  padding-top: 135px;
+  display: inline-block;
+  font-size: 38px;
+}
+
+.diamond-10 {
+    background-color:grey;
+    height: 300px;
+    width: 300px;
+    transform: rotate(45deg);
+    transform-origin: 180% 307%;
+    position:absolute;
+    z-index: 0;
+}
+
+.diamond-11 {
+    background-color:black;
+    height: 150px;
+    width: 150px;
+    transform: rotate(45deg);
+    transform-origin: 135% 450%;
+    position:absolute;
+    z-index: 0;
+}
