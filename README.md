@@ -19,6 +19,8 @@ Getting Started
 
 All you need is a browser to run the database. Chrome works best.
 
+https://whispering-eyrie-47796.herokuapp.com/
+
 Running the tests
 
 The database has 3 separate tables, the artists details, the works and the galleries where they are currently being shown.
